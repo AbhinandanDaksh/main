@@ -39,6 +39,8 @@ const images = [
   image_8,
 ];
 
+
+
 const TourInfo = () => {
   const [highlight, setHighlight] = useState(true);
   const [inclusions, setInclusions] = useState(true);
@@ -212,7 +214,7 @@ const TourInfo = () => {
           {/* Highlights */}
           <div className="" id="highlights">
             <div className="flex justify-between">
-              <h2 className="text-lg font-semibold text-gray-800 mb-4">
+              <h2 className="inline-block text-gray-700  font-semibold tracking-wide text-xl mb-4">
                 Highlights
               </h2>
               <button
@@ -233,7 +235,7 @@ const TourInfo = () => {
                 } overflow-hidden`}
             >
               <li>
-                Soar high above the mystical landscapes of Cappadocia, witnessing the sun's first rays painting the Goreme Valley landscape gold, on a hot air balloon ride.
+                fSoar high above the mystical landscapes of Cappadocia, witnessing the sun's first rays painting the Goreme Valley landscape gold, on a hot air balloon ride.
               </li>
               <li>Kickstart your adventure with a pick-up from your hotel, a hot cup of coffee or tea, and some breakfast snacks to fuel your flight.</li>
               <li>
@@ -255,7 +257,7 @@ const TourInfo = () => {
           {/* Inclusions */}
           <div id="inclusions">
             <div className="flex justify-between items-center">
-              <h2 className="text-lg font-semibold text-gray-800">Inclusions</h2>
+              <h2 className="inline-block text-gray-700  font-semibold tracking-wide text-xl mb-4">Inclusions</h2>
               <button
                 className="p-1 focus:outline-none"
                 onClick={() => setInclusions(!inclusions)}
@@ -302,7 +304,7 @@ const TourInfo = () => {
           {/* Exclusions */}
           <div className="" id="exclusions">
             <div className="flex justify-between">
-              <h2 className="text-lg font-semibold text-gray-800 mb-4">
+              <h2 className="inline-block text-gray-700  font-semibold tracking-wide text-xl mb-4">
                 Exclusions
               </h2>
               <button
@@ -322,7 +324,7 @@ const TourInfo = () => {
               className={`flex text-gray-600 md:text-base text-sm gap-3 ${exclusions ? "h-auto" : "h-[0px]"
                 } overflow-hidden`}
             >
-              <img src="https://www.headout.com/static/svg/close.svg"/>Photography & video (unavailable on the Royal queen bright morning flight)
+              <img src="https://www.headout.com/static/svg/close.svg" />Photography & video (unavailable on the Royal queen bright morning flight)
             </p>
           </div>
           <div className="border-b"></div>
@@ -335,7 +337,7 @@ const TourInfo = () => {
                   } overflow-hidden`}
               >
                 <div className="flex justify-between mb-10">
-                  <h2 className="text-lg font-medium">Itinerary</h2>
+                  <h2 className="inline-block text-gray-700  font-semibold tracking-wide text-xl mb-4">Itinerary</h2>
                   <button
                     className="-mt-2"
                     onClick={() => {
@@ -349,7 +351,7 @@ const TourInfo = () => {
                     )}
                   </button>
                 </div>
-                <div className="flex md:flex-row flex-col md:items-center items-start justify-between border-b pb-4 md:text-base text-sm">
+                <div className="flex md:flex-row flex-col md:items-center items-start justify-between  pb-4 md:text-base text-sm">
                   <div className="flex items-center space-x-2">
                     <FaClock className="text-gray-500" />
                     <span className="text-gray-700 text-sm">
@@ -415,9 +417,9 @@ const TourInfo = () => {
           <div className=" border-b"></div>
 
           {/* Cancellation Policy */}
-          <div className="bg-white p-6 shadow rounded-lg" id="cancellation">
+          <div id="cancellation">
             <div className="flex justify-between">
-              <h2 className="text-lg font-semibold text-gray-800 mb-4">
+              <h2 className="inline-block text-gray-700  font-semibold tracking-wide text-xl mb-4">
                 Cancellation Policy
               </h2>
               <button
@@ -441,11 +443,12 @@ const TourInfo = () => {
               begins and get a full refund.
             </p>
           </div>
+          <div className=" border-b" ></div>
 
           {/* Reviews */}
-          <div className="bg-white p-6 shadow rounded-lg" id="reviews">
+          <div id="reviews">
             <div className="flex justify-between">
-              <h2 className="text-lg font-semibold text-gray-800 mb-4">
+              <h2 className="inline-block text-gray-700  font-semibold tracking-wide text-xl mb-4">
                 Reviews
               </h2>
               <button
@@ -465,40 +468,49 @@ const TourInfo = () => {
               className={` text-gray-600 md:text-base text-sm ${reviews ? "h-auto" : "h-[0px]"
                 } overflow-hidden`}
             >
-              <div className="flex justify-between mb-8">
-                <div className="flex items-center space-x-4">
-                  <div className="text-4xl font-bold text-pink-500">4.6</div>
-                  <div>
-                    <div className="text-sm text-gray-600">(435 ratings)</div>
-                    <div className="text-sm text-gray-500">
-                      Guests from 20+ countries loved this experience.
+              <div className="">
+              <p className="text-sm text-gray-700">How do we collect reviews?</p>
+                <div className="flex justify-between mb-8">
+
+                  <div className="flex items-center space-x-4">
+                   
+
+                    
+                    <div >
+                    <div className="flex items-center text-[#e5006e] text-4xl font-semibold -mt-2.5 gap-[5px]
+">
+                    <span className="text-3xl"><FaStar /></span>4.6</div>
+                      <div className="text-sm text-gray-600">(435 ratings)</div>
+                     
                     </div>
                   </div>
-                </div>
-                <div className="w-1/2">
-                  {[1, 2, 3, 4, 5].map((stars) => (
-                    <div key={stars} className="flex items-center gap-2">
-                      <span className="text-[#f60607] text-lg w-[100px] text-end">
-                        {"★".repeat(stars)}
-                      </span>
-                      <div className="h-2 bg-gray-200 w-full rounded overflow-hidden">
-                        <div
-                          className="h-full bg-pink-500"
-                          style={{ width: `${stars * 20}%` }}
-                        ></div>
+                  <div className="w-1/2">
+                    {[1, 2, 3, 4, 5].map((stars) => (
+                      <div key={stars} className="flex items-center gap-2">
+                        <span className="text-[#f60607] text-lg w-[100px] text-end">
+                          {"★".repeat(stars)}
+                        </span>
+                        <div className="h-2 bg-gray-200 w-full rounded overflow-hidden">
+                          <div
+                            className="h-full bg-pink-500"
+                            style={{ width: `${stars * 20}%` }}
+                          ></div>
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
+
               </div>
+
               {/* Banner */}
-              <div className="h-[80px] rounded-lg bg-[#fff5fc] flex gap-4 justify-start items-center p-8">
-                <div className="relative w-[50px] h-[50px] overflow-hidden rounded-lg">
+              <div className="h-[80px] rounded-md bg-[#fff5fc] flex gap-4 justify-start items-center p-8">
+                <div className="relative w-[50px] h-[65px] overflow-hidden ">
                   <div className="absolute w-full marquee">
                     {[flag1, flag2, flag3, flag1, flag2].map((item) => (
                       <img
                         src={item}
-                        className="w-full mb-4 rounded-md"
+                        className="w-[70%] mb-1"
                         alt=""
                       />
                     ))}
@@ -506,10 +518,10 @@ const TourInfo = () => {
                 </div>
 
                 <span className="text-sm font-normal">
-                  Guests from <span className="font-medium">India</span>,{" "}
-                  <span className="font-medium">France</span>,{" "}
-                  <span className="font-medium">Italy</span> and over{" "}
-                  <span className="font-medium">29 countries</span> have loved
+                  Guests from <span className="font-semibold text-gray-800">India</span>,{" "}
+                  <span className="font-semibold text-gray-800">France</span>,{" "}
+                  <span className="font-semibold text-gray-800">Italy</span> and over{" "}
+                  <span className="font-semibold text-gray-800">29 countries</span> have loved
                   this experience
                 </span>
               </div>
@@ -517,7 +529,7 @@ const TourInfo = () => {
               <div className="w-full max-w-5xl mx-auto">
                 {/* Heading + Navigation Buttons in One Row */}
                 <div className="flex justify-between items-center mt-8 mb-4">
-                  <h2 className="text-lg font-semibold text-gray-800">
+                  <h2 className="text-lg font-semibold text-gray-700">
                     Snapshots from our guests
                   </h2>
 
@@ -582,7 +594,7 @@ const TourInfo = () => {
                       "The organization of the activity very efficient. They picked us up from the hotel and took us to Love Valley from where we left for the flight. The day before the activity they contacted me to confirm every",
                   },
                 ].map((review, idx) => (
-                  <div key={idx} className="border-b py-4">
+                  <div key={idx} className=" py-4">
                     <div className="flex justify-between items-center">
                       <div className="flex gap-4 justify-start items-center">
                         <div className="w-12 h-12 flex items-center justify-center bg-green-300 rounded-full text-lg font-bold">
@@ -592,11 +604,12 @@ const TourInfo = () => {
                           <h4 className="text-sm font-semibold m-0">
                             {review.name}
                           </h4>
-                          <span className="text-sm text-pink-500 m-0">
-                            {review.rating}{" "}
-                            <span className="text-base mx-1">
+                          <span className="text-sm m-0">
+                            
+                            <span className="text-xl mx-1  text-pink-500">
                               {"★".repeat(5)}
                             </span>
+                            {review.rating}{"/5 "}
                           </span>
                         </div>
                       </div>
@@ -613,9 +626,10 @@ const TourInfo = () => {
               </div>
             </div>
           </div>
+          <div className="border-b" ></div>
 
           {/* Your experience */}
-          <div className="bg-white p-6 shadow rounded-lg" id="experience">
+          <div className="" id="experience">
             <div className="flex justify-between">
               <h2 className="text-lg font-semibold text-gray-800 mb-4">
                 Your experience
@@ -671,9 +685,10 @@ const TourInfo = () => {
               </div>
             </div>
           </div>
+          <div className="border-b" ></div>
 
           {/* Before you go */}
-          <div className="bg-white p-6 shadow rounded-lg" id="know">
+          <div className="" id="know">
             <div className="flex justify-between">
               <h2 className="text-lg font-semibold text-gray-800 mb-4">
                 Know Before you go
@@ -744,9 +759,10 @@ const TourInfo = () => {
               </div>
             </div>
           </div>
+          <div className="border-b" ></div>
 
           {/* My Tickets */}
-          <div className="bg-white p-6 shadow rounded-lg" id="tickets">
+          <div className="" id="tickets">
             <div className="flex justify-between">
               <h2 className="text-lg font-semibold text-gray-800 mb-4">
                 My Tickets
@@ -786,9 +802,10 @@ const TourInfo = () => {
               </li>
             </ul>
           </div>
+          <div className="border-b" ></div>
 
           {/* My Map */}
-          <div className="bg-white p-6 shadow rounded-lg" id="where">
+          <div className="" id="where">
             <div className="flex justify-between">
               <h2 className="text-lg font-semibold text-gray-800 mb-4">
                 Where ?
@@ -826,6 +843,7 @@ const TourInfo = () => {
               />
             </div>
           </div>
+          <div className="border-b" ></div>
         </div>
 
         {/* Sticky Availability Section */}
