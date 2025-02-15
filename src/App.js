@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="">
       <Navbar />
-      <div className='mt-20'>
+      <div className=''>
 {/* <TourDetails /> */}
       <AllRoutes />
       </div>

@@ -43,7 +43,7 @@ export default function HomePage() {
   return (
     <div>
       {/* Hero Section */}
-      <div className="relative w-full h-[550px] overflow-hidden">
+      <div className="relative  h-[550px] overflow-hidden">
         <video
           className="absolute top-1/2 left-1/2 w-auto min-w-full min-h-full -translate-x-1/2 -translate-y-1/2"
           autoPlay
@@ -53,25 +53,29 @@ export default function HomePage() {
           <source src={hero_vid} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <div className="absolute bottom-16 left-12 w-[600px]">
-          <h4 className="text-white font-medium text-4xl">
-            The world's best experiences curated just for you
-          </h4>
-          <div className="flex-grow max-w-md hidden sm:flex mt-4">
-            <input
-              type="text"
-              placeholder="Search for experiences and cities"
-              className="w-full px-4 py-2 border rounded-l-lg focus:outline-none focus:ring focus:border-blue-400 placeholder:text-sm"
-            />
-            <button className="px-4 py-2 bg-gray-100 border rounded-r-lg">
-              <i className="fa fa-search"></i>
-            </button>
+        <div className="w-9/12 m-auto ">
+          <div className="absolute bottom-16  w-[600px]">
+            <h4 className="text-white font-medium text-4xl">
+              The world's best experiences curated just for you
+            </h4>
+            <div className="flex-grow max-w-md hidden sm:flex mt-4">
+              <input
+                type="text"
+                placeholder="Search for experiences and cities"
+                className="w-full px-4 py-2 border rounded-l-lg focus:outline-none focus:ring focus:border-blue-400 placeholder:text-sm"
+              />
+              <button className="px-4 py-2 bg-gray-100 border rounded-r-lg">
+                <i className="fa fa-search"></i>
+              </button>
+            </div>
           </div>
+
         </div>
+
       </div>
 
-      <div className="flex flex-col items-center">
-        <div className="w-[84%]">
+      <div className="flex flex-col items-center w-9/12 m-auto">
+        <div className="">
           {/*features Cards */}
           <div className="flex flex-wrap justify-between gap-10 py-10 px-4 mt-10">
             {features.map((feature, index) => (
@@ -120,7 +124,7 @@ export default function HomePage() {
 
 
       </div>
-     
+
     </div>
   );
 }

@@ -1,13 +1,14 @@
 import React from "react";
+import Logo from "../../assets/media/logo.png"
 
 export const Navbar = () => {
   return (
-    <header className="bg-white fixed w-full top-0 z-50">
+    <header className="w-9/12 m-auto top-0">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo Section */}
         <div className="flex items-center space-x-2">
-          {/* <img src="/path-to-logo.png" alt="Logo" className="h-6" /> */}
-          <span className="text-[#ff4141] text-xl font-bold">TOURist</span>
+          <img src={Logo} alt="Logo" className="" />
+          {/* <span className="text-[#ff4141] text-xl font-bold">TOURist</span> */}
         </div>
 
         {/* Search Box */}
