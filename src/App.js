@@ -10,7 +10,7 @@ function App() {
     <div className="">
       <Navbar />
       <div className='mt-20'>
-
+{/* <TourDetails /> */}
       <AllRoutes />
       </div>
       <Footer />

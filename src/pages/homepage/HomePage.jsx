@@ -10,6 +10,7 @@ import image_7 from "../../assets/media/image_23.jpg";
 import image_8 from "../../assets/media/image_24.jpg";
 import TourCardThree from "../../components/cards/TourCardThree";
 import TourCardOne from "../../components/cards/TourCardOne";
+import ReviewComponents from "./ReviewComponents"
 
 export default function HomePage() {
   const features = [
@@ -98,17 +99,28 @@ export default function HomePage() {
 
           {/* Headout’s top recommendations */}
           <section className="my-10">
-        <h2 className="text-2xl font-semibold text-gray-700">
-          Similar experiences you'd love
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mt-6">
-          {[image_1, image_2, image_3, image_4].map((item, index) => (
-            <TourCardOne image={item} key={index} />
-          ))}
-        </div>
-      </section>
+            <h2 className="text-2xl font-semibold text-gray-700">
+              Similar experiences you'd love
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mt-6">
+              {[image_1, image_2, image_3, image_4].map((item, index) => (
+                <TourCardOne image={item} key={index} />
+              ))}
+            </div>
+          </section>
         </div>
       </div>
+      <div className="bg-black h-screen w-full">
+        <div className="flex justify-center items-center">
+          <div className="text-3xl font-bold text-white mb-6 flex justify-center items-center text-center w-[40%]">
+            <h2 className="text-end ">Millions love heading out with us 💖</h2></div>
+          <div className="w-[60%] text-white"> <ReviewComponents /></div>
+
+        </div>
+
+
+      </div>
+     
     </div>
   );
 }

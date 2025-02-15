@@ -9,6 +9,7 @@ export default function AllRoutes() {
     <div>
       <Routes>
         <Route path='/' element={<TourDetails />}></Route>
+        <Route path='/Home' element={<Homepage />}></Route>
         <Route path='/tour-details' element={<TourDetails />}></Route>
         <Route path='/test' element={<TourCard />}></Route>
       </Routes>
