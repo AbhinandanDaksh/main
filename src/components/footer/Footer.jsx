@@ -32,8 +32,8 @@ export default function Footer() {
   ];
   return (
     <div >
-      <div className="flex justify-center w-11/12 md:w-9/12 mx-auto ">
-        <section className="my-8 rounded-lg p-6 flex md:flex-row flex-col-reverse gap-10 justify-between w-full">
+      <div className="flex justify-center w-11/12 md:w-9/12 mx-auto py-10 ">
+        <section className="my-8 rounded-lg p-6 flex md:flex-row flex-col-reverse gap-10 justify-between w-11/12 bg-purple-50">
           <div className="flex flex-col justify-center md:w-1/2 w-full md:px-6 px-0">
             <h2 className="text-2xl font-semibold">World at your tap.</h2>
             <p className="text-base text-gray-700 mt-2">
@@ -51,9 +51,11 @@ export default function Footer() {
         </section>
       </div>
       <div className="w-11/12 md:w-9/12 mx-auto py-10">
-        <div className="flex flex-wrap justify-center gap-6 py-10">
+        <h3 className="text-2xl font-semibold text-gray-700 my-8 "
+        >We've served 35 million+ guests and we are here for you</h3>
+        <div className="flex flex-wrap justify-center gap-14 py-10">
           {features.map((feature, index) => (
-            <div key={index} className="w-11/12 sm:w-[240px] text-center">
+            <div key={index} className="w-11/12 sm:w-[240px]  ">
               <div className="text-4xl mb-2">{feature.icon}</div>
               <h3 className="text-lg font-semibold">{feature.title}</h3>
               <p className="text-gray-600 text-sm mt-2">{feature.description}</p>
@@ -61,7 +63,7 @@ export default function Footer() {
           ))}
         </div>
       </div>
-      <div className=" bg-gray-100  ">
+      <div className=" bg-purple-50 ">
         <footer className="py-20 mt-16 text-sm w-11/12 md:w-9/12 mx-auto">
           <div className="container mx-auto px-4 md:px-6 lg:px-6">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">

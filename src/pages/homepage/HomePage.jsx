@@ -7,6 +7,8 @@ import image_4 from "../../assets/media/image_20.jpg";
 import TourCardThree from "../../components/cards/TourCardThree";
 import TourCardOne from "../../components/cards/TourCardOne";
 import ReviewComponents from "./ReviewComponents";
+import ClientsCarousel from "./ClientsCarousel";
+import ClientsR2LCarousel from "./ClientsR2LCarousel";
 
 export default function HomePage() {
   const features = [
@@ -116,17 +118,45 @@ export default function HomePage() {
       </div>
 
       {/* Reviews Section */}
+
       <div className="bg-black py-10 px-4 text-white">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-center md:text-left w-full md:w-1/2">
-            Millions love heading out with us 💖
-          </h2>
-          <div className="w-full md:w-1/2 mt-6 md:mt-0">
+        <div className="max-w-full mx-auto flex flex-col md:flex-row items-center gap-10">
+          
+          <div className="w-full md:w-[40%] text-center md:text-left md:ml-56">
+            <h2 className="text-white font-sans text-[32px] md:text-[40px] font-bold leading-[44px] md:leading-[54px] tracking-[0.6px]">
+              Millions <br /> love heading out with us 💖
+            </h2>
+          </div>
+
+          
+          <div className="w-full md:w-[60%] mt-6 md:mt-0">
             <ReviewComponents />
           </div>
         </div>
       </div>
-      
+      {/* <div className="bg-black py-10 px-4 text-white">
+        <div className=" mx-auto flex flex-col md:flex-row gap-10">
+          <div className="text-2xl md:text-3xl font-bold  ml-52 md:text-left w-full md:w-[40%] text-end ">
+            <h2 className="text-white font-sans text-[40px] font-bold  leading-[54px] tracking-[0.6px] mt-28">Millions<h2>love heading out with us 💖</h2></h2>
+          </div>
+          <div className="w-full md:w-[60%] mt-6 md:mt-0">
+            <ReviewComponents />
+          </div>
+
+        </div>
+
+      </div> */}
+      <div>
+        <div className="w-11/12 md:w-9/12 mx-auto py-10">
+          <h3 className="text-2xl font-semibold text-gray-700 my-8 ">
+            We have the best partners</h3>
+        </div>
+        <ClientsCarousel />
+        <ClientsR2LCarousel />
+
+
+      </div>
+
     </div>
   );
 }
