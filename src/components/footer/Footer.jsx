@@ -2,6 +2,7 @@ import React from "react";
 import apple from "../../assets/media/en.png";
 import google from "../../assets/media/en-342.png";
 import english from "../../assets/media/English.png";
+import Logo from "../../assets/media/logo.png"
 
 export default function Footer() {
   const features = [
@@ -64,50 +65,80 @@ export default function Footer() {
         </div>
       </div>
       <div className=" bg-purple-50 ">
-        <footer className="py-20 mt-16 text-sm w-11/12 md:w-9/12 mx-auto">
-          <div className="container mx-auto px-4 md:px-6 lg:px-6">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <div>
-                <h3 className="text-lg font-semibold">Get Help 24/7</h3>
-                <ul className="mt-4 space-y-2">
-                  <li>📞 Call +13478970100</li>
-                  <li>📧 support@headout.com</li>
-                </ul>
-              </div>
+      <footer className="py-20 mt-16 text-sm w-11/12 md:w-9/12 mx-auto">
+  <div className="mb-8">
+    <img src={Logo} alt="Logo" className="mx-auto md:mx-0" />
+  </div>
 
-              <div>
-                <h3 className="text-lg font-semibold">Cities</h3>
-                <ul className="mt-4 space-y-1">
-                  <li>New York</li>
-                  <li>Rome</li>
-                  <li>Paris</li>
-                  <li>+155 more</li>
-                </ul>
-              </div>
+  <div className="container mx-auto px-4 md:px-6 lg:px-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:text-start text-center">
+      {/* Help Section */}
+      <div>
+        <h3 className="text-lg font-semibold">Get Help 24/7</h3>
+        <ul className="mt-4 space-y-3">
+          <li>🤙 Help center</li>
+          <li>🗨️ Chat with us</li>
+          <li>📞 Call +13478970100</li>
+          <li>📧 support@headout.com</li>
+        </ul>
+      </div>
 
-              <div>
-                <h3 className="text-lg font-semibold">Headout</h3>
-                <ul className="mt-4 space-y-1">
-                  <li>Our story</li>
-                  <li>Careers</li>
-                  <li>Newsroom</li>
-                </ul>
-              </div>
+      {/* Cities */}
+      <div>
+        <h3 className="text-lg font-semibold">Cities</h3>
+        <ul className="mt-4 space-y-2">
+          <li>New York</li>
+          <li>Rome</li>
+          <li>Paris</li>
+          <li>London</li>
+          <li>Dubai</li>
+          <li>Las Vegas</li>
+          <li>+155 more</li>
+        </ul>
+      </div>
 
-              <div>
-                <h3 className="text-lg font-semibold">We Accept</h3>
-                <ul className="flex space-x-2 mt-4">
-                  <li>Visa</li>
-                  <li>PayPal</li>
-                </ul>
-                <div className="mt-4 bg-white rounded-lg shadow p-4 flex gap-4 md:justify-between justify-start">
-                  <img src={apple} alt="QR Code" className="w-[110px] h-8" />
-                  <img src={google} alt="QR Code" className="w-[110px] h-8" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </footer>
+      {/* Headout */}
+      <div>
+        <h3 className="text-lg font-semibold">Headout</h3>
+        <ul className="mt-4 space-y-2">
+          <li>Our story</li>
+          <li>Careers</li>
+          <li>Newsroom</li>
+        </ul>
+      </div>
+
+      {/* Payment Methods */}
+      <div>
+        <h3 className="text-lg font-semibold md:text-start text-center">We Accept</h3>
+        <ul className="  space-y-3 mt-4 ">
+          <li>Visa</li>
+          <li>PayPal</li>
+        </ul>
+        <div className="mt-4 bg-white rounded-lg shadow p-4 flex gap-4 justify-center md:justify-between">
+          <img src={apple} alt="Apple QR Code" className="w-20 md:w-24 h-auto" />
+          <img src={google} alt="Google QR Code" className="w-20 md:w-24 h-auto" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* Footer Bottom Section */}
+  <div className="border-t border-gray-300 w-full mt-6 sm:mt-8 pt-4">
+    <div className="flex flex-col sm:flex-row justify-between items-center text-gray-400 text-xs">
+      <p className="text-center sm:text-left">&copy; FlyFim 2025. All rights reserved.</p>
+      <div className="flex flex-wrap justify-center sm:justify-start gap-2 sm:gap-4 mt-2 sm:mt-0">
+        <a href="#" className="hover:text-gray-500">Privacy Policy</a>
+        <span>|</span>
+        <a href="#" className="hover:text-gray-500">Terms & Conditions</a>
+        <span>|</span>
+        <a href="#" className="hover:text-gray-500">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
 
       </div>
 
